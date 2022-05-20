@@ -29,7 +29,27 @@ namespace StringExamples
         //    char character = coursName[i];
         //    Console.WriteLine(character);
         //}
-        //===============================
+        //===============Video 124=================
+
+        //static void Main(string[] args)
+        //{
+        //    //0         1         2         3  
+        //    //0123456789012345678901234567890123456789
+        //    string coursName = "Learn C# for Beginners Crash Course";
+        //    string message = "Welcom to ";
+
+        //    Console.WriteLine(coursName[0]);
+        //    Console.WriteLine(coursName[7]);
+
+        //    for(int i = 13; i < 21; i++)
+        //    {
+        //        Console.Write(coursName[i]);
+        //    }
+        //    Console.WriteLine();
+            
+        //}
+
+        //==========Sec 9 video 125============
 
         static void Main(string[] args)
         {
@@ -41,12 +61,13 @@ namespace StringExamples
             Console.WriteLine(coursName[0]);
             Console.WriteLine(coursName[7]);
 
-            for(int i = 13; i < 21; i++)
+            for (int i = 13; i < coursName.Length; i++)
             {
                 Console.Write(coursName[i]);
             }
             Console.WriteLine();
-            
+            Console.WriteLine(coursName.Length);
+
         }
     }
 }
