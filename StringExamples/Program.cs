@@ -51,23 +51,59 @@ namespace StringExamples
 
         //==========Sec 9 video 125============
 
+        //static void Main(string[] args)
+        //{
+        //    //0         1         2         3  
+        //    //0123456789012345678901234567890123456789
+        //    string coursName = "Learn C# for Beginners Crash Course";
+        //    string message = "Welcom to ";
+
+        //    Console.WriteLine(coursName[0]);
+        //    Console.WriteLine(coursName[7]);
+
+        //    for (int i = 13; i < coursName.Length; i++)
+        //    {
+        //        Console.Write(coursName[i]);
+        //    }
+        //    Console.WriteLine();
+        //    Console.WriteLine(coursName.Length);
+
+        //}
+
+        //==================Sec 9 video 127=============
+        //static void Main(string[] args)
+        //{
+            //                  0         10's      20's      30's 
+            //                  0123456789012345678901234567890123456789
+            //string coursName = "Learn C# for Beginners Crash Course";
+            //int position;
+
+           /* position = coursName.IndexOf(" c", StringComparison.OrdinalIgnoreCase);*/// treats the characters in the strings to compare as if they were converted to uppercase using the conventions of the invariant culture, and then performs a simple byte comparison that is independent of language.
+
+            /* position = coursName.IndexOf(" c", StringComparison.CurrentCultureIgnoreCase);*///ignores case & used when strings are linguistically 
+            // see alos https://docs.microsoft.com/en-us/dotnet/api/system.stringcomparison?view=net-6.0
+            //Console.WriteLine(position);
+        //}
+
+        //==================Sec 9 video 128=============
         static void Main(string[] args)
         {
-            //0         1         2         3  
-            //0123456789012345678901234567890123456789
+            //                  0         10's      20's      30's 
+            //                  0123456789012345678901234567890123456789
             string coursName = "Learn C# for Beginners Crash Course";
-            string message = "Welcom to ";
+            int position = -1;
 
-            Console.WriteLine(coursName[0]);
-            Console.WriteLine(coursName[7]);
-
-            for (int i = 13; i < coursName.Length; i++)
+            //position = coursName.IndexOf(" c", StringComparison.OrdinalIgnoreCase);
+            //position = coursName.LastIndexOf(" c", StringComparison.OrdinalIgnoreCase);
+            do
             {
-                Console.Write(coursName[i]);
-            }
-            Console.WriteLine();
-            Console.WriteLine(coursName.Length);
 
+            position = coursName.IndexOf(" c", position + 1, StringComparison.OrdinalIgnoreCase);
+            Console.WriteLine(position);
+            }
+            while (position != -1);
         }
     }
 }
+
+
